@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --image: url(../images/rick.jpg);
+    --image-size: 300px;
+    --image-part: calc(var(--image-size) / 4);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timer {
+    font-size: 3rem;
+}
+
+.box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: repeat(4, var(--image-part));
+    grid-template-rows: repeat(4, var(--image-part));
+    
+    width: var(--image-size);
+    height: var(--image-size);
+    margin: 10px;
+    box-shadow: 0 0 5px 0 black;
+}
+
+.puzzle-left {
+    width: var(--image-part);
+    height: var(--image-part);
+}
+
+.puzzle-right {
+    width: var(--image-part);
+    height: var(--image-part);
+}
+
+.template {
+    width: var(--image-size);
+    height: var(--image-size);
+}
+
+.modal-dialog {
+    width: 450px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+}
+
+.image-part-1 {
+    background: var(--image);
+    background-size: var(--image-size);
+}
+
+.image-part-2 {
+    background: var(--image) calc(var(--image-part) * (-1)) 0;
+    background-size: var(--image-size);
+}
+
+.image-part-3 {
+    background: var(--image) calc(var(--image-part) * (-2)) 0;
+    background-size: var(--image-size);
+}
+
+.image-part-4 {
+    background: var(--image) calc(var(--image-part) * (-3)) 0;
+    background-size: var(--image-size);
+}
+
+.image-part-5 {
+    background: var(--image) 0 calc(var(--image-part) * (-1));
+    background-size: var(--image-size);
+}
+
+.image-part-6 {
+    background: var(--image) calc(var(--image-part) * (-1)) calc(var(--image-part) * (-1));
+    background-size: var(--image-size);
+}
+
+.image-part-7 {
+    background: var(--image) calc(var(--image-part) * (-2)) calc(var(--image-part) * (-1));
+    background-size: var(--image-size);
+}
+
+.image-part-8 {
+    background: var(--image) calc(var(--image-part) * (-3)) calc(var(--image-part) * (-1));
+    background-size: var(--image-size);
+}
+
+.image-part-9 {
+    background: var(--image) 0 calc(var(--image-part) * (-2));
+    background-size: var(--image-size);
+}
+
+.image-part-10 {
+    background: var(--image) calc(var(--image-part) * (-1)) calc(var(--image-part) * (-2));
+    background-size: var(--image-size);
+}
+
+.image-part-11 {
+    background: var(--image) calc(var(--image-part) * (-2)) calc(var(--image-part) * (-2));
+    background-size: var(--image-size);
+}
+
+.image-part-12 {
+    background: var(--image) calc(var(--image-part) * (-3)) calc(var(--image-part) * (-2));
+    background-size: var(--image-size);
+}
+
+.image-part-13 {
+    background: var(--image) 0 calc(var(--image-part) * (-3));
+    background-size: var(--image-size);
+}
+
+.image-part-14 {
+    background: var(--image) calc(var(--image-part) * (-1)) calc(var(--image-part) * (-3));
+    background-size: var(--image-size);
+}
+
+.image-part-15 {
+    background: var(--image) calc(var(--image-part) * (-2)) calc(var(--image-part) * (-3));
+    background-size: var(--image-size);
+}
+
+.image-part-16 {
+    background: var(--image) calc(var(--image-part) * (-3)) calc(var(--image-part) * (-3));
+    background-size: var(--image-size);
+}

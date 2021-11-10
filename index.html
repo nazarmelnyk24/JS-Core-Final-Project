@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+    <h2 class="timer">01 : 00</h2>
+    <div class="btn-container my-2">
+        <button class="btn btn-danger mx-2 start-button">Start Game!</button>
+        <button class="btn btn-danger mx-2 result-button disabled">Check Result</button>
+        <button class="btn btn-danger mx-2 new-button">New Game</button>
+    </div>
+
+    <div class="box-container">
+        <div class="box box-initial">
+            <div class="puzzle puzzle-left">
+                <div class="image image-part-1" data-pos='0'></div>
+            </div>
+            <div class="puzzle puzzle-left">
+                <div class="image image-part-2" data-pos='1'></div>
+            </div>
+            <div class="puzzle puzzle-left">
+                <div class="image image-part-3" data-pos='2'></div>
+            </div>
+            <div class="puzzle puzzle-left">
+                <div class="image image-part-4" data-pos='3'></div>
+            </div>
+            <div class="puzzle puzzle-left">
+                <div class="image image-part-5" data-pos='4'></div>
+            </div>
+            <div class="puzzle puzzle-left">
+                <div class="image image-part-6" data-pos='5'></div>
+            </div>
+            <div class="puzzle puzzle-left">
+                <div class="image image-part-7" data-pos='6'></div>
+            </div>
+            <div class="puzzle puzzle-left">
+                <div class="image image-part-8" data-pos='7'></div>
+            </div>
+            <div class="puzzle puzzle-left">
+                <div class="image image-part-9" data-pos='8'></div>
+            </div>
+            <div class="puzzle puzzle-left">
+                <div class="image image-part-10" data-pos='9'></div>
+            </div>
+            <div class="puzzle puzzle-left">
+                <div class="image image-part-11" data-pos='10'></div>
+            </div>
+            <div class="puzzle puzzle-left">
+                <div class="image image-part-12" data-pos='11'></div>
+            </div>
+            <div class="puzzle puzzle-left">
+                <div class="image image-part-13" data-pos='12'></div>
+            </div>
+            <div class="puzzle puzzle-left">
+                <div class="image image-part-14" data-pos='13'></div>
+            </div>
+            <div class="puzzle puzzle-left">
+                <div class="image image-part-15" data-pos='14'></div>
+            </div>
+            <div class="puzzle puzzle-left">
+                <div class="image image-part-16" data-pos='15'></div>
+            </div>
+        </div>
+        <div class="box box-end">
+            <div class="puzzle puzzle-right"></div>
+            <div class="puzzle puzzle-right"></div>
+            <div class="puzzle puzzle-right"></div>
+            <div class="puzzle puzzle-right"></div>
+            <div class="puzzle puzzle-right"></div>
+            <div class="puzzle puzzle-right"></div>
+            <div class="puzzle puzzle-right"></div>
+            <div class="puzzle puzzle-right"></div>
+            <div class="puzzle puzzle-right"></div>
+            <div class="puzzle puzzle-right"></div>
+            <div class="puzzle puzzle-right"></div>
+            <div class="puzzle puzzle-right"></div>
+            <div class="puzzle puzzle-right"></div>
+            <div class="puzzle puzzle-right"></div>
+            <div class="puzzle puzzle-right"></div>
+            <div class="puzzle puzzle-right"></div>
+        </div>
+
+    </div>
+
+    <div>
+        <h2 class="text-center my-3">Original image:</h2>
+        <img class="template" src="images/rick.jpg">
+    </div>
+
+    <div class="modal time-left-modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                </div>
+                <div class="modal-body py-0 px-4">
+                    <p class="fs-4">You still have time, you sure? <span class="timer-modal-window">01 : 00</span></p>
+                </div>
+                <div class="modal-footer mx-auto pt-0 border-0">
+                    <button type="button" class="btn btn-danger close-button" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success check-button">Check</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal lost-modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                </div>
+                <div class="modal-body py-0 px-4">
+                    <p class="fs-4 text-center">It's a pity, but you lost</p>
+                </div>
+                <div class="modal-footer mx-auto pt-0 border-0">
+                    <button type="button" class="btn btn-danger close-button" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal win-modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                </div>
+                <div class="modal-body py-0 px-4">
+                    <p class="fs-4 text-center">Woohoo, well done, you did it!</p>
+                </div>
+                <div class="modal-footer mx-auto pt-0 border-0">
+                    <button type="button" class="btn btn-danger close-button" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="scripts/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+        integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
